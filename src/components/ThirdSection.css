@@ -1,0 +1,16 @@
+.third-section {
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.third-box {
+  background-color: #222;
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 2rem;
+}
