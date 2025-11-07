@@ -6,7 +6,7 @@ A scroll-driven, cinematic web experience inspired by the Zero Limits design.
 https://cinematic-scroll-uivercel.vercel.app/
 
 ## Submission Report
-See: **[report.md](./report.md)**
+See: **[report.md](./REPORT.md)**
 
 ## Features
 - Continuous atmospheric particle field
