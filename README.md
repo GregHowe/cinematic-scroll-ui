@@ -1,16 +1,18 @@
 # Cinematic Scroll UI
 
-A scroll-driven, cinematic web experience built in React.  
-Inspired by the Zero Limits immersive UI.
+A scroll-driven, cinematic web experience inspired by the Zero Limits design.
 
 ## Live Demo
 https://cinematic-scroll-uivercel.vercel.app/
 
+## Submission Report
+See: **[report.md](./report.md)**
+
 ## Features
-- Continuous atmospheric particle background
+- Continuous atmospheric particle field
 - Smooth parallax transitions between sections
-- Scroll-based text motion and fading
-- High-performance animation with Framer Motion
+- Scroll-controlled text movement and fading
+- High-performance animations using Framer Motion
 
 ## Tech Stack
 | Feature | Library |
@@ -21,12 +23,19 @@ https://cinematic-scroll-uivercel.vercel.app/
 | Framework | React |
 
 ## Screenshots
-*(Add your captures here, like:)*
-/screenshots/hero.png
-/screenshots/hero.png
-/screenshots/hero.png
 
-### Run HTTP
-![HttpTesting](./screenshots/1.png)
+### Init Component Effect
+![HttpTesting](/screenshots/1.png)
+
+### Transition Component 
 ![HttpTesting](/screenshots/2.png)
-![HttpTesting](../screenshots/3.png)
+
+### Strucrture Component
+![HttpTesting](/screenshots/3.png)
+
+## Video Walkthrough
+(link after uploading)
+
+## Author
+**Richard Fernandez — Front-End Developer**
+
