@@ -1,30 +1,30 @@
+/* SecondSection.css */
+
 .second-section {
+  position: relative;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(to bottom, #1f1c2c, #928dab);
+  padding: 0;
+  margin: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-}
+  text-align: center;
 
-.text-container {
-  text-align: left;
-  max-width: 800px;
-  padding: 2rem;
+  /* Fondo oscuro cinematográfico */
+  background: radial-gradient(circle at center, #0b0a1d, #0f0c29, #141321);
   color: white;
-  font-family: 'Montserrat', sans-serif;
-  z-index: 2;
+  font-family: "Montserrat", sans-serif;
 }
 
-.text-container h2 {
+.second-section h2 {
   font-size: 3rem;
+  letter-spacing: 1px;
   margin-bottom: 1rem;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
-.text-container p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  opacity: 0.9;
+.second-section p {
+  font-size: 1.4rem;
+  opacity: 0.8;
 }

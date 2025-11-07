@@ -1,29 +1,26 @@
+/* ThirdSection.css */
+
 .third-section {
+  position: relative;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(to top, #000000, #434343);
+  padding: 0;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-}
-
-.closing-text {
   text-align: center;
+
+  /* El final se siente más profundo */
+  background: radial-gradient(circle at center, #070614, #0b0a1d, #0f0c29);
   color: white;
-  font-family: 'Montserrat', sans-serif;
-  z-index: 2;
-  padding: 2rem;
+  font-family: "Montserrat", sans-serif;
 }
 
-.closing-text h2 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-}
-
-.closing-text p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  opacity: 0.85;
+.third-section h2 {
+  font-size: 3.4rem;
+  letter-spacing: 1.5px;
+  opacity: 0.9;
+  filter: blur(0.7px); /* sutil desenfoque cinematográfico */
+  text-shadow: 0 0 45px rgba(255, 255, 255, 0.12);
 }

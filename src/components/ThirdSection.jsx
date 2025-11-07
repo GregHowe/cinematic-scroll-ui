@@ -1,22 +1,26 @@
-import React from 'react';
-import './ThirdSection.css';
-import { motion } from 'framer-motion';
+// ThirdSection.jsx
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import "./ThirdSection.css";
 
 const ThirdSection = () => {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start 80%", "end 20%"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const translateY = useTransform(scrollYProgress, [0, 1], [60, 0]);
+
   return (
-    <section className="third-section">
+    <section className="third-section" ref={ref}>
       <motion.div
-        className="closing-text"
-        initial={{ opacity: 0, scale: 0.8, y: 50 }}
-        whileInView={{ opacity: 1, scale: 1.2, y: 0 }}
-        transition={{ duration: 1.2, ease: 'easeOut' }}
-        viewport={{ once: true }}
+        className="third-section__inner"
+        style={{ opacity, y: translateY }}
       >
-        <h2>You’ve arrived</h2>
-        <p>
-          This is the Hall of Zero Limits.  
-          Where vision meets motion, and every scroll reveals your gift.
-        </p>
+        <h2>There is more than what we see.</h2>
       </motion.div>
     </section>
   );
