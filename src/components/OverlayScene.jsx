@@ -1,21 +1,30 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
-import './OverlayScene.css'
+// OverlayScene.jsx
+import React from "react";
+import "./OverlayScene.css";
+import { motion } from "framer-motion";
 
-function OverlayScene() {
-  const { scrollYProgress } = useScroll()
-  const scale = useTransform(scrollYProgress, [0, 0.3], [1, 4])
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0])
-
+const OverlayScene = () => {
   return (
-    <motion.div className="overlay-scene">
-      <motion.h1 style={{ scale, opacity }} className="overlay-title">
-        Zero Limits
-      </motion.h1>
-      <motion.p style={{ opacity }} className="overlay-subtitle">
-        Scroll down to discover
-      </motion.p>
-    </motion.div>
-  )
-}
+    <motion.div
+      className="overlay-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+    >
+      <div className="gradient-layer" />
+      <div className="blur-layer" />
 
-export default OverlayScene
+      <motion.div
+        className="parallax-text"
+        initial={{ opacity: 0, scale: 0.8, y: 50 }}
+        animate={{ opacity: 1, scale: 1.2, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      >
+        <h1>Zero Limits</h1>
+        <p>Experience the cinematic scroll</p>
+      </motion.div>
+    </motion.div>
+  );
+};
+
+export default OverlayScene;

@@ -1,23 +1,29 @@
 .third-section {
+  width: 100vw;
   height: 100vh;
-  background-color: #000;
+  background: linear-gradient(to top, #000000, #434343);
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 100;
-  position: relative;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.third-box {
-  background-color: #222;
-  padding: 3rem;
-  border-radius: 12px;
+.closing-text {
   text-align: center;
-  font-size: 2rem;
-  color: #fff;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 2;
+  padding: 2rem;
 }
 
+.closing-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
 
-.third-box h3 {
-  color: #fff;
+.closing-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.85;
 }

@@ -68,3 +68,10 @@ button:focus-visible {
   }
 }
 
+html, body {
+  overflow-x: hidden;
+  background: #0f0c29;
+}
+canvas {
+  image-rendering: pixelated;
+}

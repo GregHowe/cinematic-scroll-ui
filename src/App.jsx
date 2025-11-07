@@ -1,21 +1,14 @@
-import { useState } from 'react'
-import './App.css'
-import SecondSection from './components/SecondSection';
-import ThirdSection from './components/ThirdSection';
-import OverlayScene from './components/OverlayScene';
-import TransitionLayer from './components/TransitionLayer';
+// App.jsx
+import ParticlesBackground from "./components/ParticlesBackground";
+import ScrollController from "./components/ScrollController";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-      <div className="App">
-           <OverlayScene />
-          <TransitionLayer />
-          <SecondSection />
-          <ThirdSection />
-        </div>
-  )
+    <>
+      <ParticlesBackground /> {/* ← SIEMPRE AQUÍ */}
+      <ScrollController />
+    </>
+  );
 }
 
-export default App
+export default App;

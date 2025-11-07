@@ -1,30 +1,23 @@
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React from 'react';
 import './SecondSection.css';
+import { motion } from 'framer-motion';
 
 const SecondSection = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
-  const opacity = useTransform(scrollYProgress, [0.1, 0.6], [1, 0]);
-  const y = useTransform(scrollYProgress, [0.2, 0.6], [0, -50]);
-
   return (
-    <section ref={ref} className="second-section">
-      <div className="second-content">
-        <motion.h2
-          className="second-title"
-          style={{ opacity, y }}
-          transition={{ duration: 1 }}
-        >
-          Welcome to the next layer
-        </motion.h2>
-        <motion.p
-          className="second-subtitle"
-          style={{ opacity, y }}
-        >
-          This is a deeper experience
-        </motion.p>
-      </div>
+    <section className="second-section">
+      <motion.div
+        className="text-container"
+        initial={{ opacity: 0, scale: 0.8, y: 50 }}
+        whileInView={{ opacity: 1, scale: 1.2, y: 0 }}
+        transition={{ duration: 1.2, ease: 'easeOut' }}
+        viewport={{ once: true }}
+      >
+        <h2>Unleash the power</h2>
+        <p>
+          Step into a world beyond limits.  
+          Scroll to ignite the cinematic journey.
+        </p>
+      </motion.div>
     </section>
   );
 };
