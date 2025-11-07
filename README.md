@@ -24,13 +24,13 @@ See: **[report.md](./REPORT.md)**
 
 ## Screenshots
 
-### Init Component Effect
+### Initial Hero Scene Animation
 ![HttpTesting](/screenshots/1.png)
 
-### Transition Component 
+### Scroll-Driven Section Transition
 ![HttpTesting](/screenshots/2.png)
 
-### Strucrture Component
+### Component Layout and Structure Overview
 ![HttpTesting](/screenshots/3.png)
 
 ## Video Walkthrough
