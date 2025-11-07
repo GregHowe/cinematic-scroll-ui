@@ -13,24 +13,70 @@ const ParticlesBackground = () => {
       id="tsparticles-global"
       init={particlesInit}
       options={{
-        fullScreen: { enable: true, zIndex: 1 }, // ⬅️ SIEMPRE visible en fondo
+        fullScreen: { enable: true, zIndex: 1 },
         detectRetina: true,
+
+        /* ✅ Comportamiento Responsive */
+        responsive: [
+          {
+            maxWidth: 768, // móviles
+            options: {
+              particles: {
+                number: { value: 20 },
+                size: { value: { min: 4, max: 18 } },
+                move: { speed: 0.45 }
+              }
+            }
+          }
+        ],
+
         particles: {
-          number: { value: 160, density: { enable: true, area: 1200 } },
+          /* ✅ Número balanceado (cine suave) */
+          number: { value: 50, density: { enable: true, area: 900 } },
+
+          /* ✅ Color ahora neutral — combina con todas las escenas */
           color: { value: "#ffffff" },
-          opacity: { value: 0.35 },
-          size: { value: 2.1 },
-          move: { enable: true, speed: 1.15 },
-          twinkle: { particles: { enable: true, frequency: 0.23, opacity: 1 } }
+
+          /* ✅ Opacidad con respiración sutil */
+          opacity: {
+            value: 0.28,
+            animation: {
+              enable: true,
+              speed: 0.6,
+              minimumValue: 0.12
+            }
+          },
+
+          /* ✅ Tamaño un poco más grande, pero NO globos */
+          size: {
+            value: { min: 4.5, max: 22 },
+            animation: {
+              enable: true,
+              speed: 1.2,
+              minimumValue: 4.5
+            }
+          },
+
+          /* ✨ Glow cinematográfico */
+          blur: { enable: true, value: 6 },
+
+          /* 🌬 Movimiento suave atmosférico */
+          move: {
+            enable: true,
+            speed: 0.55,
+            direction: "none",
+            outModes: "out"
+          }
         }
       }}
+
       style={{
-        position: "fixed", // ⬅️ Esto es LO QUE FALTABA
+        position: "fixed",
         top: 0,
         left: 0,
         width: "100vw",
         height: "100vh",
-        pointerEvents: "none", // ⬅️ No bloquea clics
+        pointerEvents: "none"
       }}
     />
   );
