@@ -34,7 +34,7 @@ See: **[report.md](./REPORT.md)**
 ![HttpTesting](/screenshots/3.png)
 
 ## Video Walkthrough
-(link after uploading)
+[(link after uploading)](https://drive.google.com/file/d/1nHFTDfO_zIJTZHj-_0FHJxbuAUDMR_Bf/view?usp=drive_link)
 
 ## Author
 **Richard Fernandez — Front-End Developer**
